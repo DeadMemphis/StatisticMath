@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UIprob", "UIprob\UIprob.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StatisticMath", "StatisticMath\StatisticMath.vcxproj", "{4C80B827-8943-4D78-8EDB-2F483196693E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StaticMathLib", "StaticMathLib\StaticMathLib.vcxproj", "{64091C24-0E8F-4062-9B3B-A40DBBE004FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{4C80B827-8943-4D78-8EDB-2F483196693E}.Release|x64.Build.0 = Release|x64
 		{4C80B827-8943-4D78-8EDB-2F483196693E}.Release|x86.ActiveCfg = Release|Win32
 		{4C80B827-8943-4D78-8EDB-2F483196693E}.Release|x86.Build.0 = Release|Win32
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Debug|x64.ActiveCfg = Debug|x64
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Debug|x64.Build.0 = Debug|x64
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Debug|x86.ActiveCfg = Debug|Win32
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Debug|x86.Build.0 = Debug|Win32
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Release|x64.ActiveCfg = Release|x64
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Release|x64.Build.0 = Release|x64
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Release|x86.ActiveCfg = Release|Win32
+		{64091C24-0E8F-4062-9B3B-A40DBBE004FD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
