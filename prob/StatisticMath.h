@@ -84,21 +84,11 @@ bool operator == (Range range, int val)
 #pragma region display func
 
 template <class T> void show(T* val) {
-	int counter = 0;
-	for (auto i : *val)
-	{
-		cout << "arr[" << counter << "] = " << i << endl;
-		counter++;
-	}
+
 }
 
 template <class T> void show(T* val, std::string info) {
-	cout << "==> " << info << ": ";
-	for (auto i : *val)
-	{
-		cout << i << " ";
-	}
-	cout << endl;
+
 }
 
 #pragma endregion
@@ -113,17 +103,7 @@ template <class T> void show(T* val, std::string info) {
 /// <param name="X_min"></param>
 /// <returns></returns>
 std::vector<Range> ranged_array(float& part_interval, int& interval, int& X_min) {
-	std::vector<Range> array;
-	float _xmin = (float)X_min, _xmax = 0;
-	for (int i = 0; i < interval; i++)
-	{
-		_xmax = _xmin + part_interval;
-		round(_xmax, 100);
-		Range _range(_xmin, _xmax);
-		array.push_back(_range);
-		_xmin = _xmax;
-	}
-	return array;
+
 }
 
 /// <summary>
@@ -133,17 +113,7 @@ std::vector<Range> ranged_array(float& part_interval, int& interval, int& X_min)
 /// <param name="array"></param>
 /// <returns></returns>
 std::vector<int> average_array(std::vector<Range>* ranges, std::vector<int>* array) {
-	std::vector<int> arr;
-	int counter = 0;
-	for (auto iterator = ranges->begin(); iterator != ranges->end(); iterator++)
-	{
-		for (auto iter = array->begin(); iter != array->end(); iter++)
-			if (*iterator == *iter)
-				counter++;
-		arr.push_back(counter);
-		counter = 0;
-	}
-	return arr;
+
 }
 
 /// <summary>
@@ -152,10 +122,7 @@ std::vector<int> average_array(std::vector<Range>* ranges, std::vector<int>* arr
 /// <param name="ranges"></param>
 /// <returns></returns>
 std::vector<float> mid_ranged_array(std::vector<Range>* ranges) {
-	std::vector<float> array;
-	for (auto iterator = ranges->begin(); iterator != ranges->end(); iterator++)
-		array.push_back(iterator->middle);
-	return array;
+
 } // here allocating memory for *array back in stack
 
 /// <summary>
@@ -164,18 +131,8 @@ std::vector<float> mid_ranged_array(std::vector<Range>* ranges) {
 /// <param name="averages"></param>
 /// <param name="count"></param>
 /// <returns></returns>
-std::vector<float> relative_frequency_array(std::vector<int>* averages, int& count)
-{
-	int num = 0;
-	float wi = 0.0;
-	std::vector<float> array;
-	for (std::vector<int>::iterator iterator = averages->begin(); iterator != averages->end(); iterator++)
-	{
-		num = *iterator;
-		wi = (float)num / count;
-		array.push_back(wi);
-	}
-	return array;
+std::vector<float> relative_frequency_array(std::vector<int>* averages, int& count) {
+
 }
 
 /// <summary>
@@ -185,15 +142,7 @@ std::vector<float> relative_frequency_array(std::vector<int>* averages, int& cou
 /// <param name="interval"></param>
 /// <returns></returns>
 std::vector<float> accum_relative_frequencyF(std::vector<float>* rel_freq, int& interval) {
-	std::vector<float>array;
-	float sum = 0;
-	array.push_back(0);
-	for (int i = 0; i < interval - 1; i++)
-	{
-		sum += (*rel_freq)[i];
-		array.push_back(sum);
-	}
-	return array;
+
 }
 
 /// <summary>
@@ -202,17 +151,8 @@ std::vector<float> accum_relative_frequencyF(std::vector<float>* rel_freq, int& 
 /// <param name="averages"></param>
 /// <param name="count"></param>
 /// <returns></returns>
-std::vector<float> histogram_array(std::vector<float>* rel_freq, float& h)
-{
-	float hist = 0.0, num = 0.0;
-	std::vector<float> array;
-	for (std::vector<float>::iterator iterator = rel_freq->begin(); iterator != rel_freq->end(); iterator++)
-	{
-		num = *iterator;
-		hist = num / h;
-		array.push_back(hist);
-	}
-	return array;
+std::vector<float> histogram_array(std::vector<float>* rel_freq, float& h) {
+
 }
 
 #pragma endregion
@@ -220,17 +160,11 @@ std::vector<float> histogram_array(std::vector<float>* rel_freq, float& h)
 #pragma region sort
 
 int find_min(std::vector<int>* array, int& count) {
-	int min = 1000;
-	for (int i = 0; i < count; i++)
-		if ((*array)[i] < min) min = (*array)[i];
-	return min;
+
 }
 
 int find_max(std::vector<int>* array, int& count) {
-	int max = 0;
-	for (int i = 0; i < count; i++)
-		if ((*array)[i] > max) max = (*array)[i];
-	return max;
+
 }
 
 #pragma endregion
